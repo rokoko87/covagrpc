@@ -1,0 +1,152 @@
+syntax = "proto3";
+
+package com.cova.ws.controller;
+
+option java_package = "com.cova.ws.controller";
+option java_multiple_files = true;
+
+
+
+
+
+service CompanyService {
+	//Unary
+	rpc LoadCompanies (FiltrosRequest) returns (CompanyResponse){};
+	
+}
+
+
+message CompanyResponse {
+    repeated Company companies = 1;
+}
+
+message Company {
+   
+    int32 companyId = 1;
+	
+	string nombre = 2;
+	
+	string rutaAcceso = 3;
+	
+	bool subdominioActivo = 4;
+	
+	string dominio = 5;
+	
+	string owner = 6;
+	
+	string contacto = 7;
+	
+	string correoElectronico = 8;
+	
+	int32 imagenId = 9;
+	
+	string imagenRuta = 10;
+	
+	int32 imagenModalidadId = 11;
+	
+	string imagenModalidadDesc = 12;
+	
+	string descripcion = 13;
+	
+	string descripcionCorta = 14;
+	
+	int32 tipoActividadEconomicaId = 15;
+	
+	string tipoActividadEconomicaDesc = 16;
+	
+	int32 actividadEconomicaId = 17;
+	
+	string actividadEconomicaDesc = 18;
+	
+	int32 tipoTamanoEmpresaId = 19;
+	
+	string tipoTamanoEmpresaDesc = 20;
+	
+	int32 tipoCapitalEmpresaId = 21;
+	
+	string tipoCapitalEmpresaDesc = 22;
+	
+	string nivel = 23;
+	
+	string facebook = 24;
+	
+	string instagram = 25;
+	
+	string twitter = 26;
+	
+	string pinterest = 27;
+	
+	string linkedIn = 28;
+	
+	string web = 29;
+	
+	string watsapp = 30;
+	
+	int32 plan = 31;
+	
+	bool planActivo = 32;
+	
+	bool status = 33;
+   
+}
+
+
+message FiltrosRequest {
+	
+	int32 id = 1;
+	
+	string nombre = 2;
+	
+	string rutaAcceso = 3;
+	
+	string subdominioActivo = 4;
+	
+	string dominio = 5;
+	
+	string owner = 6;
+	
+	string contacto = 7;
+	
+	string correoElectronico = 8;
+	
+	int32 imagenId = 9;
+	
+	int32 tipoModImagenId = 10;
+	
+	string descripcionCorta = 11;
+	
+	string descripcion = 12;
+	
+	int32 tipoActividadEconomicaId = 13;
+	
+	int32 actividadEconomicaId = 14;
+	
+	int32 tipoTamanioEmpresaId = 15;
+	
+	int32 tipoCapitalEmpresaId = 16;
+	
+	string nivel = 17;
+	
+	
+	string facebook = 18;
+	
+	string instagram = 19;
+	
+	string twitter = 20;
+	
+	string pinterest = 21;
+	
+	string linkedIn = 22;
+	
+	string web = 23;
+	
+	string watsapp = 24;
+	
+	bool status = 25;
+}
+
+
+
+
+
+

@@ -55,6 +55,15 @@
 		    <version>8.0.13</version>
 		</dependency>
 		
+		
+		<!-- 	CovaCommon    -->
+		<dependency>
+			<groupId>com.cova.ws</groupId>
+			<artifactId>CovaCommons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		
 	</dependencies>
 	
 	<build>
