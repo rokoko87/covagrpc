@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package com.cova.ws.grpc.greet;
+
+option java_package = "com.cova.ws.grpc.greet";
+option java_multiple_files = true;
+
+
+
+
+
+service Greeter {
+	//Unary
+	rpc SayHello (HelloRequest) returns (HelloReply){};
+	
+}
+
+
+
+
+message HelloRequest {
+	string name = 1;
+}
+
+message HelloReply {
+	string reply = 1;
+}
+
+

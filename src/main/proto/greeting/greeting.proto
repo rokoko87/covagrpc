@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package com.cova.ws.grpc.greeting;
+
+option java_package = "com.cova.ws.grpc.greeting";
+option java_multiple_files = true;
+
+
+message Greeting {
+   string first_name = 1;
+   string last_name = 2;
+   
+}
+
+message GreetRequest {
+   Greeting greeting = 1;
+   
+}
+
+
+message GreetResponse {
+   string result = 1;
+   
+}
+
+message GreatManyTimesRequest {
+	string result = 1;
+}
+
+
+
+message GreetManyTimesRequest {
+	Greeting greeting = 1;
+}
+
+message GreetManyTimesResponse {
+	string result = 1;
+}
+
+service GreetService {
+	//Unary
+	rpc Greet (GreetRequest) returns (GreetResponse){};
+	
+	//Seerver Stream
+	rpc GreetManyTimes (GreetManyTimesRequest) returns (stream GreetManyTimesResponse){};
+}
+
